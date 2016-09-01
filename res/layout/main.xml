@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <TextView 
+        android:id="@+id/Text0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/title_bar"
+        android:text="人体数据测量APP"
+        android:textSize="25sp"
+    />
+	
+       
+    <com.test.BTClient.MyImageTopView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/mTopView"
+        android:background="#eee">
+    </com.test.BTClient.MyImageTopView>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:background="#B0C4D1"
+        android:id="@+id/mBottomView"></LinearLayout>
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#eee"
+        android:scrollbars="vertical" >
+
+	<TextView android:id="@+id/in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    />
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+		<EditText  
+			android:id="@+id/Edit0" 
+			android:layout_width="0dp" 
+			android:layout_height="40dp"
+			android:background="@null"
+			android:layout_weight="4"
+			android:layout_gravity="bottom">
+		</EditText>
+		<Button 
+		    android:text="发送"
+			android:id="@+id/Button02" 
+			android:layout_width="0dp" 
+			android:layout_height="40dp"
+			android:layout_weight="1"
+			android:background="@drawable/send"
+			android:onClick="onSendButtonClicked">
+		</Button>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/bottom_bar"
+        >             
+      
+        <ImageView
+        	android:id="@+id/img_tab_now"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"        	     	
+        	android:scaleType="matrix"
+        	android:layout_gravity="bottom"            	
+            android:layout_alignParentBottom="true"
+        	android:src="@drawable/tab_bg" />              
+         
+         
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="2dp"            
+        	>
+        	
+            <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/Button03"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:onClick="onConnectButtonClicked"
+        			android:src="@drawable/bt" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="蓝牙搜索"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	 <LinearLayout	
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/Button04"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:onClick="onSaveButtonClicked"
+        			android:src="@drawable/baocun" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="保存"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	 <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/Button05"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:onClick="onClearButtonClicked"
+        			android:src="@drawable/clean" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="清空"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>
+        	 
+        	 <LinearLayout
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+              	android:gravity="center_horizontal"
+              	android:orientation="vertical"
+              	android:layout_weight="1">               	
+                <ImageView
+            		android:id="@+id/Button06"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"        	     	
+        			android:scaleType="matrix"
+        			android:onClick="onQuitButtonClicked"
+        			android:src="@drawable/exit" />
+                <TextView
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="退出"
+            		android:textColor="#fff"
+            		android:textSize="12sp" />                
+        	 </LinearLayout>        
+          
+        </LinearLayout>     
+       
+    </RelativeLayout>
+</LinearLayout>
